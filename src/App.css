@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  background: repeating-linear-gradient(rgb(99, 97, 97) , white);
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10nv;
+  background: rgb(77, 75, 75);
+  color:white;
+
+}
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+li{
+  color: white;
+}
+li:hover {
+transform: scale(1.5);
+transition-duration: 0.75s;
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-around;
+}
+.post{
+  background: repeating-radial-gradient( rgb(106, 117, 87) , white) ;
+  padding: 20px;
+}
+img{
+  height: 200px;
+  width: 200px;
+}
+.postH2{
+  color: black;
+}
+label{
+  margin: 5px;
+}
