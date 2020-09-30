@@ -10,6 +10,7 @@ function Details(props) {
             <img src={"/images/" + props.location.state.imgSrc} />
             <h3>Name : {props.location.state.name} </h3>
             <h3>Type : {props.location.state.type} </h3>
+            <h5>Id: {props.location.state.key}</h5>
         </div>
     );
 }
