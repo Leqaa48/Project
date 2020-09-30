@@ -10,7 +10,7 @@ function AddPost() {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [imgSrc, setImgSrc] = useState('');
-    const [id, setId] = useState('');
+    const [id, setId] = useState(posts.length);
 
 
     const updateName = (e) => {
@@ -22,14 +22,10 @@ function AddPost() {
     const updateImgSrc = (e) => {
         setImgSrc(e.target.value);
     };
-    const updateId = (e) => {
-        setId(posts.length + 1);
-        console.log(id);
-
-    };
+    
     const AddPosts = (e) => {
         e.preventDefault();
-        updateId();
+        setId(posts.length + 1);
         addPosts(prevPosts => [...prevPosts, { id: id, name: name, type: type, imgSrc: imgSrc }]);
 
     };
@@ -40,7 +36,7 @@ function AddPost() {
             <h1>Add Post Page </h1>
             <div className="tableDiv">
 
-                <form onSubmit={setId, AddPosts}>
+                <form onSubmit={AddPosts}>
                     <label>Enter the name of product </label>
                     <input type="textbox" value={name} onChange={updateName} />
                     <br />
